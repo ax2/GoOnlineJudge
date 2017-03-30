@@ -1,13 +1,13 @@
 {{define "content"}}
-<h1>Admin - Problem List</h1>
+<h1>管理 - 题目列表</h1>
 {{$isAdmin := .IsAdmin}}
 
 <div class="pagination">
   {{$current := .CurrentPage}}
   {{if .IsPreviousPage}}
-  <a href="?page={{NumSub .CurrentPage 1}}">Prev</a>
+  <a href="?page={{NumSub .CurrentPage 1}}">上一页</a>
   {{else}}
-  <span>Prev</span>
+  <span>上一页</span>
   {{end}}
   &nbsp;
   {{if .IsPageHead}}
@@ -49,9 +49,9 @@
   {{end}}
   &nbsp;
   {{if .IsNextPage}}
-  <a href="?page={{NumAdd .CurrentPage 1}}">Next</a>
+  <a href="?page={{NumAdd .CurrentPage 1}}">下一页</a>
   {{else}}
-  <span>Next</span>
+  <span>下一页</span>
   {{end}}
 </div>
 
@@ -76,14 +76,14 @@
         <tr>
           <td>{{.Pid}}</td>
           <td><a href="/problems/{{.Pid}}">{{.Title}}</a></td>
-          <td>{{.ROJ}}</td>
+          <!--td>{{.ROJ}}</td-->
           <td>{{.RPid}}</td>
           {{if $isAdmin}}
-          <td><a class="problem_status" href="#" data-id="{{.Pid}}">[{{if ShowStatus .Status}}Available{{else}}Reserved{{end}}]</a></td>
-          <td><a class="problem_delete" href="#" data-id="{{.Pid}}">[Delete]</a></td>
-          <td><a class="problem_edit" href="#" data-id="{{.Pid}}">[Edit]</a></td>
+          <td><a class="problem_status" href="#" data-id="{{.Pid}}">[{{if ShowStatus .Status}}已上线{{else}}已下线{{end}}]</a></td>
+          <td><a class="problem_delete" href="#" data-id="{{.Pid}}">[删除]</a></td>
+          <td><a class="problem_edit" href="#" data-id="{{.Pid}}">[编辑]</a></td>
           {{end}}
-          <td><a class="test_data" href="/admin/testdata/{{.Pid}}">[Test Data]</a></td>
+          <td><a class="test_data" href="/admin/testdata/{{.Pid}}">[测试数据]</a></td>
         </tr>
       {{end}}  
     {{end}}

@@ -3,13 +3,13 @@
 
 <form accept-charset="UTF-8" id="search_form">
 <select id="type" name="type">
-<option value="Sid">Solution ID</option>
-<option value="Pid">Problem ID</option>
+<option value="Sid">答案ID</option>
+<option value="Pid">题目ID</option>
 </select>
 <br>
 <input id="id" name="id" size="20" type="text" pattern="^[0-9]+" required>
 <div class="actions">
-	<input name="rejudgebutton" type="submit" value="Rejudge" required="required" />
+	<input name="rejudgebutton" type="submit" value="重判" required="required" />
 </div>
 </form>
 

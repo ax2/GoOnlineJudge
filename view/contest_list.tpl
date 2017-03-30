@@ -5,9 +5,9 @@
   <thead>
     <tr>
       <th class="header">ID</th>
-      <th class="header">Title</th>
-      <th class="header">Status</th>
-      <th class="header">Type</th>
+      <th class="header">标题</th>
+      <th class="header">状态</th>
+      <th class="header">类型</th>
     </tr>
   </thead>
   <tbody>

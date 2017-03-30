@@ -10,7 +10,7 @@
         </tr>
       </tbody>
     </table>
-    <p class="tip">Double click to view unformatted code.</p>
+    <p class="tip">双击显示未格式化的代码。</p>
     <br />
   {{end}}
 	<a href="/contests/{{.Cid}}/problems/{{.Pid}}">Back to problem {{.Pid}}</a>

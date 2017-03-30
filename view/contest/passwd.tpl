@@ -1,13 +1,13 @@
 {{define "content"}}
 <h1>{{.Contest}}</h1>
-  <div class="flash alert alert-warning" id="signin_failed" style="display:none;">Incorrect Password.</div>
+  <div class="flash alert alert-warning" id="signin_failed" style="display:none;">密码错误</div>
 <form accept-charset="UTF-8" class="" id="pw_contest" method="post" >
 	<div class="field">
-    	<label for="password">Password</label><br>
+    	<label for="password">密码</label><br>
     	<input id="password" name="password" size="20" type="text" />
     </div>
     <div class="actions">
-      <input name="commit" type="submit" value="Submit">
+      <input name="commit" type="submit" value="提交">
     </div>
 </form>
  <script type="text/javascript">

@@ -2,11 +2,11 @@
 <meta http-equiv="refresh" content="30">
 <!-- <h1>Status List</h1> -->
 <form accept-charset="UTF-8" id="search_form" class="form-inline">
-  <span> User: </span><input id="search_uid" name="search_uid" size="20" type="text" value="{{.SearchUid}}">
-  <span style="margin-left:10px">Problem: </span><input id="search_pid" name="search_pid" size="10" type="text" value="{{.SearchPid}}">
-  <span style="margin-left:10px">Result: </span>
+  <span> 用户: </span><input id="search_uid" name="search_uid" size="20" type="text" value="{{.SearchUid}}">
+  <span style="margin-left:10px">题目: </span><input id="search_pid" name="search_pid" size="10" type="text" value="{{.SearchPid}}">
+  <span style="margin-left:10px">结果: </span>
     <select id="search_judge" name="search_judge">
-      <option value="0">All</option>
+      <option value="0">全部</option>
       <option value="1" {{if .SearchJudge0}}selected{{end}}>Pending</option>
       <option value="2" {{if .SearchJudge1}}selected{{end}}>Running &amp;Judging</option>
       <option value="3" {{if .SearchJudge2}}selected{{end}}>Compile Error</option>
@@ -19,14 +19,14 @@
       <option value="10" {{if .SearchJudge9}}selected{{end}}>Presentation Error</option>
       <option value="11" {{if .SearchJudge10}}selected{{end}}>System Error</option>
     </select>
-    <span style="margin-left:10px">Language: </span>
+    <span style="margin-left:10px">语言: </span>
     <select id="search_language" name="search_language">
-      <option value="0" {{if .SearchLanguage0}}selected{{end}}>All</option>
+      <option value="0" {{if .SearchLanguage0}}selected{{end}}>全部</option>
       <option value="1" {{if .SearchLanguage1}}selected{{end}}>C</option>
       <option value="2" {{if .SearchLanguage2}}selected{{end}}>C++</option>
       <option value="3" {{if .SearchLanguage3}}selected{{end}}>Java</option>
     </select>
-  <input name="commit" type="submit" value="Go" style="margin-left:10px">
+  <input name="commit" type="submit" value="提交" style="margin-left:10px">
 </form>
 
 <div class="pagination">
@@ -87,15 +87,15 @@
 <table id="contest_list" class="table table-striped table-hover">
   <thead>
     <tr>
-      <th class="header">Run ID</th>
-      <th class="header">User</th>
-      <th class="header">Problem</th>
-      <th class="header">Result</th>
-      <th class="header">Time</th>
-      <th class="header">Memory</th>
-      <th class="header">Language</th>
-      <th class="header">Code Length</th>
-      <th class="header">Submit Time</th>
+      <th class="header">运行ID</th>
+      <th class="header">用户</th>
+      <th class="header">题目</th>
+      <th class="header">结果</th>
+      <th class="header">时间</th>
+      <th class="header">内存</th>
+      <th class="header">语言</th>
+      <th class="header">代码长度</th>
+      <th class="header">提交时间</th>
     </tr>
   </thead>
   <tbody>
@@ -112,7 +112,7 @@
             <td><span class="submitRes-{{.Judge}}" disabled="disabled">{{ShowJudge .Judge}}</span></td>
             <td>{{.Time}}MS</td>
             <td>{{.Memory}}KB</td>
-            <td>{{ShowLanguage .Language}}{{if or (or (eq $uid .Uid) (LargePU $privilege)) .Share}}<a href="/status/code?sid={{.Sid}}">[view]</a>{{end}}</td>
+            <td>{{ShowLanguage .Language}}{{if or (or (eq $uid .Uid) (LargePU $privilege)) .Share}}<a href="/status/code?sid={{.Sid}}">[查看]</a>{{end}}</td>
             <td>{{.Length}}B</td>
             <td>{{ShowTime .Create}}</td>
           </tr>

@@ -1,19 +1,19 @@
 {{define "content"}}
-<h1>Admin - News Add</h1>
+<h1>管理 - 新闻添加</h1>
 <form accept-charset="UTF-8" class="new_news" id="new_news" method="post" action="/admin/news">
     <div style="margin:0;padding:0;display:inline">
       <input name="utf8" type="hidden" value="✓">
     </div>
     <div class="field">
-    	<label for="news_title">Title</label><br>
+    	<label for="news_title">标题</label><br>
     	<input id="news_title" name="title" size="60" type="text">
     </div>
     <div class="field">
-    	<label for="news_content">Content</label><br>
+    	<label for="news_content">内容</label><br>
     	<input id="news_content" name="content" size="60" type="text">
     </div>
     <div class="actions">
-      <input name="commit" type="submit" value="Submit">
+      <input name="commit" type="submit" value="提交">
     </div>
 </form>
 <script>

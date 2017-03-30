@@ -57,11 +57,11 @@
   <table id="ranklist" class="table table-bordered table-striped table-hover">
     <thead>
       <tr>
-        <th class="header">Rank</th>
-        <th class="header">User</th>
-        <th class="header">Nick</th>
-        <th class="header">Motto</th>
-        <th class="header">Ratio(Solve/Submit)</th>
+        <th class="header">排名</th>
+        <th class="header">用户</th>
+        <th class="header">昵称</th>
+        <th class="header">口号</th>
+        <th class="header">解决/提交</th>
       </tr>
     </thead>
     <tbody>

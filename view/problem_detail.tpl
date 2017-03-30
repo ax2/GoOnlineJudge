@@ -5,39 +5,39 @@
   <h1 style="text-align: center" class="page-header">{{.Title}}</h1>
   <div id="problemInfo" class="rfloat" title="Problem Information">
     <div class="limit">
-      <div class="key">Time Limit</div>
+      <div class="key">时间限制</div>
       <div class="value">{{.Time}}s<br></div>
     </div>
     <div class="limit">
-      <div class="key">Memory Limit</div>
+      <div class="key">内存限制</div>
       <div class="value">{{.Memory}}KB<br></div>
     </div>
     <div class="checker">
-      <div class="key">Judge Program</div>
+      <div class="key">评判程序</div>
       <div class="value">
         <span>{{ShowSpecial .Special}}</span>
       </div>
     </div>
     <div class="checker">
-      <div class="key">Ratio(Solve/Submit)</div>
+      <div class="key">解决/提交</div>
       <div class="value">
         <span>{{ShowRatio .Solve .Submit}}(<a href="/status?pid={{.Pid}}&judge=3">{{.Solve}}</a>/<a href="/status?pid={{.Pid}}">{{.Submit}}</a>)</span>
       </div>
     </div>
   </div>
   <div id="problemContent">
-    <div class="problemIteam">Description:</div>
+    <div class="problemIteam">描述:</div>
     <p>{{.Description}}</p>
-    <div class="problemIteam">Input:</div>
+    <div class="problemIteam">输入:</div>
     <p>{{.Input}}</p>
-    <div class="problemIteam">Output:</div>
+    <div class="problemIteam">输出:</div>
     <p>{{.Output}}</p>
-    <div class="problemIteam">Sample Input:</div>
+    <div class="problemIteam">示例输入:</div>
     <pre class="sample">{{.In}}</pre>
-    <div class="problemIteam">Sample Output:</div>
+    <div class="problemIteam">示例输出:</div>
     <pre class="sample">{{.Out}}</pre>
     {{if .Hint}}
-      <div class="problemIteam">Hint:</div>
+      <div class="problemIteam">提示:</div>
       <p>{{.Hint}}</p>
     {{end}}
     {{if .Source}}
@@ -47,7 +47,7 @@
   </div>
   <hr>
 
-  <a href="#" id="submission_link" onclick="show_submission(); return false;">Submit</a>
+  <a href="#" id="submission_link" onclick="show_submission(); return false;">提交</a>
   <script src="/static/js/codemirror.js" type="text/javascript"></script>
   <div id="submission" style="display: none;">
   <form accept-charset="UTF-8" id="problem_submit">
@@ -55,7 +55,7 @@
       <input name="utf8" type="hidden" value="✓">
     </div>
     <div class="field">
-      <label for="compiler_id">Compiler</label>
+      <label for="compiler_id">编译器</label>
       <select id="compiler_id" name="compiler_id">
         <option value="1" {{if eq $compiler_id "1"}}selected="selected"{{end}}>C</option>
         <option value="2" {{if eq $compiler_id "2"}}selected="selected"{{end}}>C++</option>
@@ -67,13 +67,13 @@
     <div class="field">
       <div class="rfloat">
         <input checked="checked" id="advanced_editor" name="advanced_editor" onchange="toggle_editor()" onclick="toggle_editor()" type="checkbox" value="1" />
-        Use advanced editor
+        使用增强编辑器
     </div>     
-     <label for="code">Code</label>
+     <label for="code">代码</label>
       <textarea id="code" name="code" autofocus=""></textarea>
     </div>
     <div class="actions">
-      <input name="submit" type="submit" value="Submit">
+      <input name="submit" type="submit" value="提交">
     </div>
   </form>
   </div>

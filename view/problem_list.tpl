@@ -2,14 +2,14 @@
 <!-- <h1>Problem List</h1> -->
 
 <form accept-charset="UTF-8" id="search_form" class="form-inline">
-  <span> Search: </span><input id="search" name="search" size="30" type="text" value="{{.SearchValue}}">
+  <span> 搜索: </span><input id="search" name="search" size="30" type="text" value="{{.SearchValue}}">
   <select id="option" name="option" style="margin-left:10px">
-    <option value="title" {{if .SearchTitle}}selected{{end}}>Title</option>
+    <option value="title" {{if .SearchTitle}}selected{{end}}>标题</option>
     <option value="pid" {{if .SearchPid}}selected{{end}}>ID</option>
     <option value="source" {{if .SearchSource}}selected{{end}}>Source</option>
     <option value="page">Page</option>
   </select>
-  <input name="commit" type="submit" value="Go" style="margin-left:10px">
+  <input name="commit" type="submit" value="提交" style="margin-left:10px">
 </form>
 
 <div class="pagination">
@@ -69,11 +69,11 @@
 <table id="problem_list" class="table table-bordered table-striped table-hover">
   <thead>
     <tr>
-      <th class="header">Flag</th>
+      <th class="header">标志</th>
       <th class="header">ID</th>
-      <th class="header">Title</th>
-      <th class="header">Ratio(Solve/Submit)</th>
-      <th class="header">OJ</th>
+      <th class="header">标题</th>
+      <th class="header">解决/提交</th>
+      <!--th class="header">OJ</th-->
       <th class="header">VPID</th>
     </tr>
   </thead>
@@ -94,7 +94,7 @@
               <td>{{.Pid}}</td>
               <td><a href="/problems/{{.Pid}}">{{.Title}}</a></td>
               <td>{{ShowRatio .Solve .Submit}} (<a href="/status?pid={{.Pid}}&judge=3">{{.Solve}}</a>/<a href="/status?pid={{.Pid}}">{{.Submit}}</a>)</td>
-              <td>{{.ROJ}}</td>
+              <!--td>{{.ROJ}}</td-->
               <td>{{.RPid}}</td>
             </tr>
           {{/*end*/}}

@@ -23,58 +23,58 @@
         <div id="headerInfo" class="rfloat">
           {{if .IsCurrentUser}}
             <a href="/settings">[{{.CurrentUser}}]</a>
-            <a class="user_signout" href="#">[Sign Out]</a>
+            <a class="user_signout" href="#">[登出]</a>
           {{end}}
         </div>
         <hr> 
         </div>
         <div id="navibar" class="span-3">
         <ul>
-          <li>{{if .IsHome}}<span>Home</span>{{else}}<a href="/admin">Home</a>{{end}}</li>
+          <li>{{if .IsHome}}<span>首页</span>{{else}}<a href="/admin">首页</a>{{end}}</li>
           {{if .IsAdmin}}
-          <li>{{if .IsNotice}}<span>Notice</span>{{else}}<a href="/admin/notice">Notice</a>{{end}}</li>
-          <li><a href="/admin/news">News</a></li>
+          <li>{{if .IsNotice}}<span>消息</span>{{else}}<a href="/admin/notice">消息</a>{{end}}</li>
+          <li><a href="/admin/news">新闻</a></li>
           {{if .IsNews}}
             <div id="psnavi">
               <ul>
-                <li>{{if .IsList}}<span>List</sapn>{{else}}<a href="/admin/news">List</a>{{end}}</li>
-                <li>{{if .IsAdd}}<span>Add</sapn>{{else}}<a href="/admin/news/new">Add</a>{{end}}</li>
+                <li>{{if .IsList}}<span>列表</sapn>{{else}}<a href="/admin/news">列表</a>{{end}}</li>
+                <li>{{if .IsAdd}}<span>添加</sapn>{{else}}<a href="/admin/news/new">添加</a>{{end}}</li>
               </ul>
             </div>
           {{end}}
           {{end}}
-          <li><a href="/admin/problems">Problems</a></li>
+          <li><a href="/admin/problems">题目</a></li>
           {{if .IsProblem}}
             <div id="psnavi">
               <ul>
-                <li>{{if .IsList}}<span>List</sapn>{{else}}<a href="/admin/problems">List</a>{{end}}</li>
+                <li>{{if .IsList}}<span>列表</sapn>{{else}}<a href="/admin/problems">列表</a>{{end}}</li>
                 {{if .IsAdmin}}
-                <li>{{if .IsAdd}}<span>Add</sapn>{{else}}<a href="/admin/problems/new">Add</a>{{end}}</li>
-                <li>{{if .IsImport}}<span>Import</sapn>{{else}}<a href="/admin/problems/importor">Import</a>{{end}}</li>
+                <li>{{if .IsAdd}}<span>添加</sapn>{{else}}<a href="/admin/problems/new">添加</a>{{end}}</li>
+                <li>{{if .IsImport}}<span>导入</sapn>{{else}}<a href="/admin/problems/importor">导入</a>{{end}}</li>
                 {{end}}
                 {{if .RejudgePrivilege}}
-                <li>{{if .IsRejudge}}<span>Rejudge</span>{{else}}<a href="/admin/rejudger">Rejudge</a>{{end}}</li>
+                <li>{{if .IsRejudge}}<span>重判</span>{{else}}<a href="/admin/rejudger">重判</a>{{end}}</li>
                 {{end}}
               </ul>
             </div>
           {{end}}
-          <li><a href="/admin/contests/">Contests</a></li>
+          <li><a href="/admin/contests/">竞赛</a></li>
           {{if .IsContest}}
             <div id="psnavi">
               <ul>
-                <li>{{if .IsList}}<span>List</sapn>{{else}}<a href="/admin/contests/">List</a>{{end}}</li>
-                <li>{{if .IsAdd}}<span>Add</sapn>{{else}}<a href="/admin/contests/new">Add</a>{{end}}</li>
+                <li>{{if .IsList}}<span>列表</sapn>{{else}}<a href="/admin/contests/">列表</a>{{end}}</li>
+                <li>{{if .IsAdd}}<span>添加</sapn>{{else}}<a href="/admin/contests/new">添加</a>{{end}}</li>
               </ul>
             </div>
           {{end}}
           {{if .IsAdmin }}
-          <li><a href="/admin/users">Users</a></li>
+          <li><a href="/admin/users">用户</a></li>
           {{if .IsUser}}
             <div id="psnavi">
               <ul>
-                <li>{{if .IsList}}<span>Privilege</sapn>{{else}}<a href="/admin/users">Privilege</a>{{end}}</li>
-                <li>{{if .IsPwd}}<span>Password</sapn>{{else}}<a href="/admin/users/pagepassword">Password</a>{{end}}</li>
-                <li>{{if .IsGenerate}}<span>Generate</sapn>{{else}}<a href="/admin/users/generation">Generate</a>{{end}}</li>
+                <li>{{if .IsList}}<span>权限</sapn>{{else}}<a href="/admin/users">权限</a>{{end}}</li>
+                <li>{{if .IsPwd}}<span>密码</sapn>{{else}}<a href="/admin/users/pagepassword">密码</a>{{end}}</li>
+                <li>{{if .IsGenerate}}<span>生成</sapn>{{else}}<a href="/admin/users/generation">生成</a>{{end}}</li>
               </ul>
             </div>
             {{end}}

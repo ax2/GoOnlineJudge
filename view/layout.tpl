@@ -46,23 +46,23 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
-                {{if .IsNews}}<li class="active"><a href="/">Home</a></li>{{else}}<li><a href="/">Home</a></li>{{end}}
-                {{if .IsProblem}}<li class="active"><a href="/problems">Problems</a>{{else}}<li><a href="/problems">Problems</a></li>{{end}}
-                {{if .IsStatus}}<li class="active"><a href="/status">Status</a></li>{{else}}<li><a href="/status">Status</a></li>{{end}}
-                {{if .IsRanklist}}<li class="active"><a href="/ranklist">Ranklist</a></li>{{else}}<li><a href="/ranklist">Ranklist</a></li>{{end}}
-                {{if .IsContest}}<li class="active"><a href="/contests">Contests</a></li>{{else}}<li><a href="/contests">Contests</a></li>{{end}}
-                {{if.IsOSC}}<li class="active"><a href="/osc">OSC</a></li>{{else}}<li><a href="/osc">OSC</a></li>{{end}}
+                {{if .IsNews}}<li class="active"><a href="/">首页</a></li>{{else}}<li><a href="/">首页</a></li>{{end}}
+                {{if .IsProblem}}<li class="active"><a href="/problems">题库</a>{{else}}<li><a href="/problems">题库</a></li>{{end}}
+                {{if .IsStatus}}<li class="active"><a href="/status">状态</a></li>{{else}}<li><a href="/status">状态</a></li>{{end}}
+                {{if .IsRanklist}}<li class="active"><a href="/ranklist">排名</a></li>{{else}}<li><a href="/ranklist">排名</a></li>{{end}}
+                {{if .IsContest}}<li class="active"><a href="/contests">竞赛</a></li>{{else}}<li><a href="/contests">竞赛</a></li>{{end}}
+                {{if.IsOSC}}<li class="active"><a href="/osc">开源</a></li>{{else}}<li><a href="/osc">开源</a></li>{{end}}
                 {{if.IsFAQ}}<li class="active"><a href="/faq">FAQ</a></li>{{else}}<li><a href="/faq">FAQ</a></li>{{end}}
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                 {{if .IsCurrentUser}}
-                  {{if .IsShowAdmin}}<li><a href="/admin/" class="icon icon-material-star">[Admin]</a></li>{{end}}
-                  {{if .IsShowTeacher}}<li><a href="/admin/" class="icon icon-material-star-half">[Teacher]</a></li>{{end}}
+                  {{if .IsShowAdmin}}<li><a href="/admin/" class="icon icon-material-star">[管理]</a></li>{{end}}
+                  {{if .IsShowTeacher}}<li><a href="/admin/" class="icon icon-material-star-half">[教师]</a></li>{{end}}
                   <li><a href="/settings" class="icon icon-material-settings">[{{.CurrentUser}}]</a></li>
-                  <li><a class="user_signout icon icon-material-chevron-right" href="#"><span id="signout">[Sign Out]</span></a></li>
+                  <li><a class="user_signout icon icon-material-chevron-right" href="#"><span id="signout">[登出]</span></a></li>
                 {{else}}
-                  {{if .IsUserSignIn}}{{else}}<li><a class="icon icon-material-account-circle" href="/sess">[Sign In]</a></li>{{end}}
-                  {{if .IsUserSignUp}}{{else}}<li><a class="icon icon-material-person-add" href="/users/new">[Sign Up]</a></li>{{end}}
+                  {{if .IsUserSignIn}}{{else}}<li><a class="icon icon-material-account-circle" href="/sess">[登入]</a></li>{{end}}
+                  {{if .IsUserSignUp}}{{else}}<li><a class="icon icon-material-person-add" href="/users/new">[注册]</a></li>{{end}}
                 {{end}}
                 </ul>
             </div><!-- /.navbar-collapse -->
@@ -77,11 +77,12 @@
       {{if .IsContestDetail}}
       <div class="pinned note" >
           <div class="icon icon-material-add-circle" style="float:right"></div>
-          {{if .IsContestProblem}}<span>Problem</sapn>{{else}}<a href="/contests/{{.Cid}}">Problem</a>
+          {{if .IsContestProblem}}<span>题目</sapn>{{else}}<a href="/contests/{{.Cid}}">题目</a>
           {{end}}
           <br/>
-          {{if .IsContestStatus}}<span>Status</sapn>{{else}}<a href="/contests/{{.Cid}}/status">Status</a>{{end}}
-          {{if .IsContestRanklist}}<span>Ranklist</sapn>{{else}}<a href="/contests/{{.Cid}}/ranklist">Ranklist</a>{{end}}
+          {{if .IsContestStatus}}<span>状态</sapn>{{else}}<a href="/contests/{{.Cid}}/status">状态</a>{{end}}
+              <br/>
+          {{if .IsContestRanklist}}<span>排名</sapn>{{else}}<a href="/contests/{{.Cid}}/ranklist">排名</a>{{end}}
       </div>
       {{end}}
       {{if .IsCurrentUser}}

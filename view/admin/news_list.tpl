@@ -1,13 +1,13 @@
 {{define "content"}}
-<h1>Admin - News List</h1>
+<h1>管理 - 新闻列表</h1>
 <table id="news_list">
 	<thead>
 		<tr>
-		    <th class="header">Title</th>
-		    <th class="header">Date</th>
-		    <th class="header">Status</th>
-		    <th class="header">Delete</th>
-		    <th class="header">Edit</th>
+		    <th class="header">标题</th>
+		    <th class="header">日期</th>
+		    <th class="header">状态</th>
+		    <th class="header">删除</th>
+		    <th class="header">编辑</th>
 		</tr>
 	</thead>
 		<tbody>
@@ -16,9 +16,9 @@
 					<tr>
 						<td><a href="/news/{{.Nid}}">{{.Title}}</a></td>
 						<td>{{.Create}}</td>
-						<td><a class="news_status" href="#" data-id="{{.Nid}}">[{{if ShowStatus .Status}}Available{{else}}Reserved{{end}}]</a></td>
-						<td><a class="news_delete" href="#" data-id="{{.Nid}}">[Delete]</a></td>
-						<td><a class="news_edit" href="#" data-id="{{.Nid}}">[Edit]</a></td>
+						<td><a class="news_status" href="#" data-id="{{.Nid}}">[{{if ShowStatus .Status}}已上线{{else}}已下线{{end}}]</a></td>
+						<td><a class="news_delete" href="#" data-id="{{.Nid}}">[删除]</a></td>
+						<td><a class="news_edit" href="#" data-id="{{.Nid}}">[编辑]</a></td>
 					</tr>
 				{{end}}
 			{{end}}

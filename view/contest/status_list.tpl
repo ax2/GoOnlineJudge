@@ -1,12 +1,12 @@
 {{define "content"}}
-<h1 style="text-align:center">Contest Status -- {{.Contest}}</h1>
+<h1 style="text-align:center">竞赛状态 -- {{.Contest}}</h1>
 
 <form accept-charset="UTF-8" id="search_form" class="form-inline">
   <span> User: </span><input id="search_uid" name="search_uid" size="20" type="text" value="{{.SearchUid}}">
-  <span style="margin-left:10px">Problem: </span><input id="search_pid" name="search_pid" size="10" type="text" value="{{.SearchPid}}">
-  <span style="margin-left:10px">Result: </span>
+  <span style="margin-left:10px">题目: </span><input id="search_pid" name="search_pid" size="10" type="text" value="{{.SearchPid}}">
+  <span style="margin-left:10px">结果: </span>
     <select id="search_judge" name="search_judge">
-      <option value="0">All</option>
+      <option value="0">全部</option>
       <option value="1" {{if .SearchJudge0}}selected{{end}}>Pending</option>
       <option value="2" {{if .SearchJudge1}}selected{{end}}>Running &amp;Judging</option>
       <option value="3" {{if .SearchJudge2}}selected{{end}}>Compile Error</option>
@@ -19,9 +19,9 @@
       <option value="10" {{if .SearchJudge9}}selected{{end}}>Presentation Error</option>
       <option value="11" {{if .SearchJudge10}}selected{{end}}>System Error</option>
     </select>
-    <span style="margin-left:10px">Language: </span>
+    <span style="margin-left:10px">编程语言: </span>
     <select id="search_language" name="search_language">
-      <option value="0" {{if .SearchLanguage0}}selected{{end}}>All</option>
+      <option value="0" {{if .SearchLanguage0}}selected{{end}}>全部</option>
       <option value="1" {{if .SearchLanguage1}}selected{{end}}>C</option>
       <option value="2" {{if .SearchLanguage2}}selected{{end}}>C++</option>
       <option value="3" {{if .SearchLanguage3}}selected{{end}}>Java</option>
